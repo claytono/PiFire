@@ -40,6 +40,7 @@ Just as with the PiSmoker project, I had a few goals in mind.  I also wanted to 
 	* Virtual Probes to allow you to do things like averaging probes, finding highest and lowest values of certain probes, etc.
 	* Inkbird iBBQ and Meater/Meater+ Bluetooth probe support added in v1.9.0!
 	* ThermoMaven G1/G2/G4 and P-series WiFi thermometer support (experimental, via the ThermoMaven cloud)
+	* Home Assistant temperature sensors as probes, such as a Combustion thermometer through its Home Assistant integration
 * Cook Timer - Moved to the Top Bar for Easy Access
 * Notifications (Grill / Food Probes / Timer)
 	* Supports Apprise, IFTTT, Pushover, and Pushbullet Notification Services and now MQTT!

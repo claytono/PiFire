@@ -1951,6 +1951,121 @@
 					]
 				}
 			},
+			"homeassistant" : {
+				"friendly_name" : "Home Assistant Sensors",
+				"filename" : "homeassistant",
+				"description" : "This module reads temperature sensors from Home Assistant, such as wireless food probes that Home Assistant already supports.  Assign a Home Assistant entity ID to each port you want to use.  If a sensor can't be read, its probe keeps showing the last reading.",
+				"default" : false,
+				"image" : "default.png",
+				"reboot_required" : false,
+				"py_dependencies" : [],
+				"apt_dependencies" : [],
+				"command_list" : [],
+				"settings_dependencies" : {
+					"units" : {
+						"friendly_name" : "Temp Units",
+						"description" : "Select the temperature units to use for PiFire globally.  (This can be modified in settings later)",
+						"options" : {"F" : "Fahrenheit", "C": "Celsius"},
+						"settings" : ["globals", "units"]
+					}
+				},
+				"device_specific" : {
+					"ports" : ["HA1", "HA2", "HA3", "HA4", "HA5", "HA6", "HA7", "HA8"],
+					"type" : "network",
+					"config" : [
+						{
+							"label" : "url",
+							"friendly_name" : "Home Assistant URL",
+							"description" : "Base URL of your Home Assistant server, for example http://homeassistant.local:8123.",
+							"type" : "string",
+							"default" : "http://homeassistant.local:8123",
+							"hidden" : false
+						},
+						{
+							"label" : "token",
+							"friendly_name" : "Access Token",
+							"description" : "A Home Assistant long-lived access token, created under your Home Assistant profile on the Security tab.",
+							"type" : "string",
+							"default" : "",
+							"hidden" : false
+						},
+						{
+							"label" : "entity_HA1",
+							"friendly_name" : "HA1 Entity ID",
+							"description" : "Home Assistant entity ID for port HA1, for example sensor.smoker_probe_core_temperature.  Leave blank if unused.",
+							"type" : "string",
+							"default" : "",
+							"hidden" : false
+						},
+						{
+							"label" : "entity_HA2",
+							"friendly_name" : "HA2 Entity ID",
+							"description" : "Home Assistant entity ID for port HA2, for example sensor.smoker_probe_core_temperature.  Leave blank if unused.",
+							"type" : "string",
+							"default" : "",
+							"hidden" : false
+						},
+						{
+							"label" : "entity_HA3",
+							"friendly_name" : "HA3 Entity ID",
+							"description" : "Home Assistant entity ID for port HA3, for example sensor.smoker_probe_core_temperature.  Leave blank if unused.",
+							"type" : "string",
+							"default" : "",
+							"hidden" : false
+						},
+						{
+							"label" : "entity_HA4",
+							"friendly_name" : "HA4 Entity ID",
+							"description" : "Home Assistant entity ID for port HA4, for example sensor.smoker_probe_core_temperature.  Leave blank if unused.",
+							"type" : "string",
+							"default" : "",
+							"hidden" : false
+						},
+						{
+							"label" : "entity_HA5",
+							"friendly_name" : "HA5 Entity ID",
+							"description" : "Home Assistant entity ID for port HA5, for example sensor.smoker_probe_core_temperature.  Leave blank if unused.",
+							"type" : "string",
+							"default" : "",
+							"hidden" : false
+						},
+						{
+							"label" : "entity_HA6",
+							"friendly_name" : "HA6 Entity ID",
+							"description" : "Home Assistant entity ID for port HA6, for example sensor.smoker_probe_core_temperature.  Leave blank if unused.",
+							"type" : "string",
+							"default" : "",
+							"hidden" : false
+						},
+						{
+							"label" : "entity_HA7",
+							"friendly_name" : "HA7 Entity ID",
+							"description" : "Home Assistant entity ID for port HA7, for example sensor.smoker_probe_core_temperature.  Leave blank if unused.",
+							"type" : "string",
+							"default" : "",
+							"hidden" : false
+						},
+						{
+							"label" : "entity_HA8",
+							"friendly_name" : "HA8 Entity ID",
+							"description" : "Home Assistant entity ID for port HA8, for example sensor.smoker_probe_core_temperature.  Leave blank if unused.",
+							"type" : "string",
+							"default" : "",
+							"hidden" : false
+						},
+						{
+							"label" : "transient",
+							"friendly_name" : "Transient",
+							"description" : "Select whether this device is fixed/always attached (default) or if it is transient/sometimes detached.",
+							"type" : "list",
+							"list_values" : ["False", "True"],
+							"list_labels" : ["Fixed (always attached)", "Transient (sometimes detached)"],
+							"default" : "False",
+							"hidden" : true
+						}
+					]
+				}
+			},
 			"virtual_average" : {
 				"friendly_name" : "Virtual Probes - Average",
 				"filename" : "virtual_average",
